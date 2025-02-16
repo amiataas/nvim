@@ -13,6 +13,3 @@ vim.g.maplocalleader = ' '
 
 keymap('v', '<', '<gv', opts)
 keymap('v', '>', '>gv', opts)
-
-keymap('n', '<leader>x', '*``cgn', opts)
-keymap('n', '<leader>X', '#``cgN', opts)
