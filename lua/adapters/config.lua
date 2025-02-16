@@ -1,20 +1,25 @@
 local get_config = function()
 	return {
+		-- ┌─────┐
+		-- │ ┌─┐ │
+		-- │ │   │
+		-- │ └─┘ │
+		-- └─────┘
 		c = {
 			{
-				name = "Launch GDB",
-				type = "gdb",
-				request = "launch",
+				name = 'Launch GDB',
+				type = 'gdb',
+				request = 'launch',
 				program = function()
 					return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
 				end,
-				cwd = "${workspaceFolder}",
+				cwd = '${workspaceFolder}',
 				stopAtBeginningOfMainSubprogram = false,
 			},
 			{
-				name = "Launch CodeLLDB",
-				type = "codelldb",
-				request = "launch",
+				name = 'Launch CodeLLDB',
+				type = 'codelldb',
+				request = 'launch',
 				program = function()
 					return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
 				end,
@@ -22,12 +27,17 @@ local get_config = function()
 				stopOnEntry = false,
 			}
 		},
+		-- ┌────────────────────┐
+		-- │ ┌─┐┬ ┬┌┬┐┬ ┬┌─┐┌┐┌ │
+		-- │ ├─┘└┬┘ │ ├─┤│ ││││ │
+		-- │ ┴   ┴  ┴ ┴ ┴└─┘┘└┘ │
+		-- └────────────────────┘
 		python = {
 			{
 				type = 'python',
 				request = 'launch',
-				name = "Launch file",
-				program = "${file}",
+				name = 'Launch file',
+				program = '${file}',
 				pythonPath = function()
 					local cwd = vim.fn.getcwd()
 					if vim.fn.executable(cwd .. '/bin/python') == 1 then

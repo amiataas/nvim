@@ -1,3 +1,9 @@
+-- ┌──────────────────────┐
+-- │ ┬  ┬ ┬┌─┐  ┬  ┌─┐┌─┐ │
+-- │ │  │ │├─┤  │  └─┐├─┘ │
+-- │ ┴─┘└─┘┴ ┴  ┴─┘└─┘┴   │
+-- └──────────────────────┘
+
 local lspconfig_status_ok, lspconfig = pcall(require, 'lspconfig')
 if not lspconfig_status_ok then
 	return
@@ -24,7 +30,7 @@ lspconfig['lua_ls'].setup({
         checkThirdParty = true,
         library = {
           vim.env.VIMRUNTIME,
-					"${3rd}/luv/library"
+					'${3rd}/luv/library'
         }
       }
     })
