@@ -9,4 +9,5 @@ return {
 	'lua-ls',
 	'zls',
 	'pyright',
+	'rust',
 }
