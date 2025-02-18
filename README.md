@@ -89,6 +89,7 @@ The `lsp.base.lua` file is reserved for copying, any lsp in use should be added 
 - **Clangd**: Has GDB and CodeLLDB dap.
 - **Lua Language Server**
 - **Pyright**: Support debugging with debugpy package.
-- **Zig Language Server*
+- **Zig Language Server**
+- **Rust**: Rust Analyzer
 
 For CodeLLDB please install binaries of [codelldb](https://github.com/vadimcn/codelldb) in `~/.local/share/nvim/dap/codelldb`.
