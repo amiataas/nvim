@@ -14,4 +14,11 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lspconfig['rust_analyzer'].setup({
 	capabilities = capabilities,
+	settings = {
+		['rust-analyzer'] = {
+			diagnostics = {
+				enable = true,
+			}
+		}
+	},
 })
