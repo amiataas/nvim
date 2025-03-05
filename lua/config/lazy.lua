@@ -29,4 +29,5 @@ require('lazy').setup({
 	},
 	install = { colorscheme = { 'catppuccin' } },
 	checker = { enabled = true },
+	change_detection = { notify = false },
 })
